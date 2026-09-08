@@ -7,7 +7,6 @@ import org.openqa.selenium.WebDriver;
 public class ForgotPasswordPage extends BasePage {
 
     private static final By EMAIL_INPUT = By.name("name");
-    private static final By RESTORE_BUTTON = By.xpath("//button[text()='Восстановить']");
     private static final By LOGIN_LINK = By.xpath("//a[text()='Войти']");
 
     public ForgotPasswordPage(WebDriver driver) {

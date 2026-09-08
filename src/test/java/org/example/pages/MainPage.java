@@ -7,8 +7,6 @@ import org.openqa.selenium.WebDriver;
 public class MainPage extends BasePage {
 
     private static final By LOGIN_BUTTON = By.xpath("//button[text()='Войти в аккаунт']");
-    private static final By LOGO_LINK = By.cssSelector("[class*='AppHeader_header__logo'] a");
-    private static final By CONSTRUCTOR_LINK = By.xpath("//nav//a[.//p[text()='Конструктор']]");
     private static final By PERSONAL_ACCOUNT_LINK = By.xpath("//nav//a[.//p[text()='Личный Кабинет']]");
     private static final By BUNS_TAB = By.xpath("//div[span[text()='Булки']]");
     private static final By SAUCES_TAB = By.xpath("//div[span[text()='Соусы']]");
@@ -30,16 +28,6 @@ public class MainPage extends BasePage {
         String previousUrl = driver.getCurrentUrl();
         waitClickable(PERSONAL_ACCOUNT_LINK).click();
         waitUrlChanges(previousUrl);
-    }
-
-    @Step("Кликнуть на раздел «Конструктор» в шапке")
-    public void clickConstructorLink() {
-        waitClickable(CONSTRUCTOR_LINK).click();
-    }
-
-    @Step("Кликнуть на логотип Stellar Burgers")
-    public void clickLogo() {
-        waitClickable(LOGO_LINK).click();
     }
 
     @Step("Открыть вкладку «Булки»")

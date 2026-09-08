@@ -8,11 +8,13 @@ import static org.junit.Assert.assertEquals;
 public class ConstructorTabsTest extends TestBase {
 
     @Test
-    public void bunsTabIsActiveByDefault() {
+    public void userCanSwitchToBunsTab() {
         MainPage mainPage = openMainPage();
+        mainPage.openFillingsTab();
 
-        assertEquals("По умолчанию должна быть активна вкладка «Булки»",
-                "Булки", mainPage.getActiveTabName());
+        mainPage.openBunsTab();
+
+        assertEquals("Должна открыться вкладка «Булки»", "Булки", mainPage.getActiveTabName());
     }
 
     @Test
